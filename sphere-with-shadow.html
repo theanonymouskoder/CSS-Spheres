@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>CSS Sphere with shadow</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background: lightblue;
+      overflow: hidden;
+    }
+
+    .sphere {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      margin: 10px 10px 10px 200px;
+      background: 
+        radial-gradient(
+          circle at 30% 30%,
+          #ffff00,
+          #774400
+        );
+      z-index: 10;
+      position: relative;
+    }
+
+
+
+    .shadow {
+      margin-left: 200px;
+      margin-top: -35px;
+      width: 600px;
+      height: 50px;
+      background:
+        radial-gradient(
+          #000f,
+          #fff0 72%
+        );
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+  <div class = 'sphere'></div>
+  <div class = 'shadow'></div>
+</body>
+</html>
