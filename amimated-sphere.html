@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animated CSS Sphere</title>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    body {
+      background: lightblue;
+      overflow: hidden;
+      padding-top: 100px;
+    }
+
+    .sphere {
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      margin: 10px 10px 0px 175px;
+      background: 
+        radial-gradient(
+          #ffff00,
+          #774400
+        );
+      background-size: 200% 200%;
+      animation: turn 3s ease-out 0s infinite;
+      z-index: 10;
+      position: relative;
+    }
+
+    @keyframes turn {
+      0%, 100% {
+        background-position: 20% 70%;
+      }
+      50% {
+        background-position: 80% 70%;
+      }
+    }
+
+    .shadow {
+      z-index: 1;
+      position: relative;
+      margin-top: -35px;
+      width: 600px;
+      height: 50px;
+      background:
+        radial-gradient(
+          #000f,
+          #fff0 72%
+        );
+      border-radius: 50%;
+      animation: move-shadow 3s ease-out 0s infinite;
+    }
+
+    @keyframes move-shadow {
+      0%, 100% {
+        margin-left: 50px;
+      }
+      50% {
+        margin-left: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class = 'sphere'></div>
+  <div class = 'shadow'></div>
+</body>
+</html>
